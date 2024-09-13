@@ -44,30 +44,48 @@ export const Header = () => {
           <Button
             variant="ghost"
             className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
+            onClick={() =>
+              (window.location.href = "mailto:ayushkalonia2016@gmail.com")
+            }
           >
             <FiMail />
           </Button>
+
           <Button
             variant="ghost"
             className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
+            onClick={() => window.open("https://wa.me/917982079717", "_blank")}
           >
             <BiPhoneCall />
           </Button>
+
           <Button
             variant="ghost"
             className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
+            onClick={() =>
+              window.open("https://github.com/ayushjodd", "_blank")
+            }
           >
             <FaGithub />
           </Button>
+
           <Button
             variant="ghost"
             className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/ayush-jangra-9992a82a3/",
+                "_blank"
+              )
+            }
           >
             <FaLinkedin />
           </Button>
+
           <Button
             variant="ghost"
             className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
+            onClick={() => window.open("https://x.com/ayushiscoding", "_blank")}
           >
             <BsTwitterX />
           </Button>

@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Particles from "@/components/magicui/particles";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -19,42 +18,33 @@ import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 import OpenSource from "@/components/main/OpenSource";
 import { Badge } from "@/components/ui/badge";
-import BlurIn from "@/components/magicui/blur-in";
+import LetterPullup from "@/components/magicui/letter-pullup";
+import Meteors from "@/components/magicui/meteors";
 
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
   const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
+    if (!theme) {
+      setTheme("dark");
+    }
     setColor(theme === "dark" ? "#ffffff" : "#000000");
-  }, [theme]);
+  }, [theme, setTheme]);
 
   return (
-    <div className="relative flex h-full w-full flex-col rounded-lg border bg-background md:shadow-xl">
-      <Particles
-        className="absolute inset-0"
-        quantity={100}
-        ease={80}
-        color={color}
-        refresh
-      />
-      <div className="max-w-4xl mx-[25%] flex justify-between mt-16 border-b pb-4">
+    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <Meteors number={35} />
+      <div className="max-w-4xl mx-[25%] mt-16 pb-4 flex gap-x-96 items-center">
         <div className="flex items-center">
-          <BlurIn
-            word="Ayush "
-            className="text-4xl font-bold text-black dark:text-white"
-          />
+          <LetterPullup words={"Ayush Jangra"} delay={0.1} />
           <span className="ml-2 text-base">
             <Badge>Hire Me! ❤️</Badge>
           </span>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="ml-auto p-4 text-4xl"
-            >
+            <Button variant="outline" size="icon">
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
@@ -67,16 +57,12 @@ export default function ModeToggle() {
             <DropdownMenuItem onClick={() => setTheme("dark")}>
               Dark
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
-              System
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
       <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
         <Header />
       </div>
-
       <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
         <AboutMe />
       </div>
