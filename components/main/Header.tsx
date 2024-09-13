@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Badge } from "../ui/badge";
@@ -7,6 +8,9 @@ import { BiPhoneCall } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { FaGlobeAmericas } from "react-icons/fa";
+
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -14,21 +18,31 @@ export const Header = () => {
       <header>
         <div className="text-center">
           <div className="flex">
-            <h1 className="text-3xl font-bold">Ayush Jodd</h1>
-            <span className="mt-1 ml-2">
+            <h1 className="text-2xl font-bold ">Ayush Jodd</h1>
+            <span className="mt-1 ml-2 text-base">
               <Badge>Hire Me!</Badge>
             </span>
           </div>
         </div>
-        <div className="flex justify-between border">
-          <p className="pt-10 text-[#9ca3af]">
-            🗣️Hi, I’m Ayush, a passionate developer from India 🇮🇳 . I am a full
-            stack developer, Blockchain enthusiast proficiant in solidity
-            currently learning Solana development🗿
+        <div className="flex  mt-2">
+          <p className="pt-12 text-[#9ca3af]">
+            🗣️"Hey, I’m Ayush—a passionate full-stack developer crafting sleek
+            web experiences with Next.js and diving deep into Web3, building
+            dApps, and exploring the future of Solana!" 🗿
+            <Link href={"https://maps.app.goo.gl/YBbvnjn4nqhkh19VA"}>
+              <span className="flex  mt-2 ">
+                <span className="flex gap-2 hover:underline hover:text-blue-500">
+                  <span className="text-xl">
+                    <FaGlobeAmericas />
+                  </span>
+                  My Location
+                </span>
+              </span>
+            </Link>
           </p>
 
           <img
-            className="rounded-lg mt-3"
+            className="rounded-lg object-cover  transition-transform duration-300 ease-in-out transform hover:scale-105"
             width={200}
             height={200}
             alt="my image"
@@ -38,31 +52,31 @@ export const Header = () => {
         <div className="">
           <Button
             variant="ghost"
-            className="text-xl hover:bg-gray-200 p-2 cursor-pointer "
+            className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
           >
             <FiMail />
           </Button>
           <Button
             variant="ghost"
-            className="text-xl hover:bg-gray-200 p-2 cursor-pointer"
+            className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
           >
             <BiPhoneCall />
           </Button>
           <Button
             variant="ghost"
-            className="text-xl hover:bg-gray-200 p-2 cursor-pointer"
+            className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
           >
             <FaGithub />
           </Button>
           <Button
             variant="ghost"
-            className="text-xl hover:bg-gray-200 p-2 cursor-pointer"
+            className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
           >
             <FaLinkedin />
           </Button>
           <Button
             variant="ghost"
-            className="text-xl hover:bg-gray-200 p-2 cursor-pointer"
+            className="text-xl hover:bg-gray-200 p-2 cursor-pointer dark:hover:text-black"
           >
             <BsTwitterX />
           </Button>
