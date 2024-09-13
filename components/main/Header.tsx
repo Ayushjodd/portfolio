@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Badge } from "../ui/badge";
 import { FiMail } from "react-icons/fi";
 import { Button } from "../ui/button";
 import { BiPhoneCall } from "react-icons/bi";
@@ -16,14 +15,6 @@ export const Header = () => {
   return (
     <>
       <header>
-        <div className="text-center">
-          <div className="flex">
-            <h1 className="text-2xl font-bold ">Ayush Jodd</h1>
-            <span className="mt-1 ml-2 text-base">
-              <Badge>Hire Me!</Badge>
-            </span>
-          </div>
-        </div>
         <div className="flex  mt-2">
           <p className="pt-12 text-[#9ca3af]">
             🗣️"Hey, I’m Ayush—a passionate full-stack developer crafting sleek
@@ -42,8 +33,8 @@ export const Header = () => {
           </p>
 
           <img
-            className="rounded-lg object-cover  transition-transform duration-300 ease-in-out transform hover:scale-105"
-            width={200}
+            className="rounded-lg "
+            width={300}
             height={200}
             alt="my image"
             src="https://utfs.io/f/7ce4b229-2a54-4b59-adc8-2420c60fb2e9-7lisbg.jpg"
