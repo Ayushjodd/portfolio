@@ -35,7 +35,7 @@ export default function ModeToggle() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       <Meteors number={35} />
-      <div className="max-w-4xl mx-[25%] mt-16 pb-4 flex gap-x-96 items-center">
+      <div className="max-w-4xl mx-auto mt-16 pb-4 flex flex-col md:flex-row gap-x-96 items-center px-4">
         <div className="flex items-center">
           <LetterPullup words={"Ayush Jangra"} delay={0.1} />
           <span className="ml-2 text-base">
@@ -60,19 +60,19 @@ export default function ModeToggle() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
+      <div className="max-w-4xl mx-auto mt-4 border-b pb-4 px-4">
         <Header />
       </div>
-      <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
+      <div className="max-w-4xl mx-auto mt-4 border-b pb-4 px-4">
         <AboutMe />
       </div>
-      <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
+      <div className="max-w-4xl mx-auto mt-4 border-b pb-4 px-4">
         <Projects />
       </div>
-      <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
+      <div className="max-w-4xl mx-auto mt-4 border-b pb-4 px-4">
         <Skills />
       </div>
-      <div className="max-w-4xl mx-[25%] mt-4 border-b pb-4">
+      <div className="max-w-4xl mx-auto mt-4 border-b pb-4 px-4">
         <OpenSource />
       </div>
     </div>
