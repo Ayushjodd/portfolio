@@ -20,6 +20,7 @@ import OpenSource from "@/components/main/OpenSource";
 import { Badge } from "@/components/ui/badge";
 import LetterPullup from "@/components/magicui/letter-pullup";
 import Meteors from "@/components/magicui/meteors";
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
@@ -38,9 +39,21 @@ export default function ModeToggle() {
       <div className="max-w-4xl mx-auto mt-16 pb-4 flex flex-col md:flex-row gap-x-96 items-center px-4">
         <div className="flex items-center">
           <LetterPullup words={"Ayush Jangra"} delay={0.1} />
-          <span className="ml-2 text-base">
-            <Badge>Hire Me! ❤️</Badge>
-          </span>
+          <CoolMode
+            options={{
+              particle:
+                "https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/1024px/1f5ff.png",
+            }}
+          >
+            <span
+              className="ml-2 text-base cursor-pointer select-none"
+              onClick={() =>
+                (window.location.href = "mailto:ayushkalonia2016@gmail.com")
+              }
+            >
+              <Badge>Hire Me! ❤️</Badge>
+            </span>
+          </CoolMode>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

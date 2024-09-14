@@ -7,7 +7,7 @@ import { BiPhoneCall } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { FaGlobeAmericas } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 import Link from "next/link";
 
@@ -24,9 +24,9 @@ export const Header = () => {
               <span className="flex  mt-2 ">
                 <span className="flex gap-2 hover:underline hover:text-blue-500">
                   <span className="text-xl">
-                    <FaGlobeAmericas />
+                    <FaLocationDot />
                   </span>
-                  My Location
+                  Najafgarh, New Delhi
                 </span>
               </span>
             </Link>
