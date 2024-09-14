@@ -84,7 +84,13 @@ const Projects = () => {
                 >
                   <FiExternalLink />
                 </Button>
-                <Button variant={"ghost"} className="ml-2  text-xl">
+                <Button
+                  onClick={() => {
+                    router.push(project.githubLink);
+                  }}
+                  variant={"ghost"}
+                  className="ml-2  text-xl"
+                >
                   <FiGithub />
                 </Button>
               </span>
